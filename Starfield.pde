@@ -64,7 +64,8 @@ interface Particle
   public void show();
   //your code here
 }
-class OddballParticle extends Particle//uses an interface{
+class OddballParticle implements Particle//uses an interface
+{
   float x,y, cloryah;
   double angle, speed;
   OddballParticle(){
@@ -84,7 +85,7 @@ class OddballParticle extends Particle//uses an interface{
     ellipse(x,y,10,10);
   }
 }
-class JumboParticle extends Particle//uses inheritance
+class JumboParticle implements Particle//uses inheritance
 {
   float x,y, cloryah;
   double angle, speed;
