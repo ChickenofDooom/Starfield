@@ -24,7 +24,8 @@ void draw()
 class NormalParticle implements Particle
 {
   float x,y, cloryah;
-  double angle, speed;{
+  double angle, speed;
+  NormalParticle(){
   x=200.0;
   y=200.0 ;
   cloryah=(int)((Math.random()*255)+200);
@@ -63,9 +64,10 @@ interface Particle
   public void show();
   //your code here
 }
-class OddballParticle implements Particle//uses an interface
-{float x,y, cloryah;
-  double angle, speed;{
+class OddballParticle extends Particle//uses an interface{
+  float x,y, cloryah;
+  double angle, speed;
+  OddballParticle(){
   x=200.0;
   y=200.0 ;
   cloryah=(int)((Math.random()*255)+200);
@@ -82,10 +84,12 @@ class OddballParticle implements Particle//uses an interface
     ellipse(x,y,10,10);
   }
 }
-class JumboParticle implements Particle//uses inheritance
+class JumboParticle extends Particle//uses inheritance
 {
   float x,y, cloryah;
-  double angle, speed;{
+  double angle, speed;
+  JumboParticle()
+  {
   x=200.0;
   y=200.0 ;
   cloryah=(int)((Math.random()*255)+200);
